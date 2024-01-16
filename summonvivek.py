@@ -2,6 +2,8 @@ import tweepy
 from airtable import Airtable
 from datetime import datetime, timedelta
 from langchain.chat_models import ChatOpenAI
+from langchain_community.chat_models import ChatOpenAI
+#python from langchain.chat_models import ChatOpenAI openaichat = ChatOpenAI(model_name="gpt-3.5-turbo")
 from langchain.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
 import schedule
 import time
@@ -12,17 +14,18 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Load your Twitter and Airtable API keys (preferably from environment variables, config file, or within the railyway app)
-TWITTER_API_KEY = os.getenv("TWITTER_API_KEY", "YourKey")
-TWITTER_API_SECRET = os.getenv("TWITTER_API_SECRET", "YourKey")
-TWITTER_ACCESS_TOKEN = os.getenv("TWITTER_ACCESS_TOKEN", "YourKey")
-TWITTER_ACCESS_TOKEN_SECRET = os.getenv("TWITTER_ACCESS_TOKEN_SECRET", "YourKey")
-TWITTER_BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN", "YourKey")
+TWITTER_API_KEY = os.getenv("TWITTER_API_KEY", "MyTwitterKey")
+TWITTER_API_SECRET = os.getenv("TWITTER_API_SECRET", "MyTwitterKeySecret")
+TWITTER_ACCESS_TOKEN = os.getenv("TWITTER_ACCESS_TOKEN", "MyTwitterAccessToken")
+TWITTER_ACCESS_TOKEN_SECRET = os.getenv("TWITTER_ACCESS_TOKEN_SECRET", "MyTwitterAccessTokenSecret")
+TWITTER_BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN", "MyTwitterBearerToken")
 
-AIRTABLE_API_KEY = os.getenv("AIRTABLE_API_KEY", "YourKey")
-AIRTABLE_BASE_KEY = os.getenv("AIRTABLE_BASE_KEY", "YourKey")
-AIRTABLE_TABLE_NAME = os.getenv("AIRTABLE_TABLE_NAME", "YourKey")
+#AIRTABLE_API_KEY = os.getenv("AIRTABLE_API_KEY", "YourKey")
+#AIRTABLE_BASE_KEY = os.getenv("AIRTABLE_BASE_KEY", "YourKey")
+#AIRTABLE_TABLE_NAME = os.getenv("AIRTABLE_TABLE_NAME", "YourKey")
+AIRTABLE_ACCESS_TOKEN = os.getenv("AIRTABLE_ACCESS_TOKEN", "AirtableAccessToken")
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "YourKey")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "MyOpenAIKey")
 
 # TwitterBot class to help us organize our code and manage shared state
 class TwitterBot:
@@ -34,7 +37,7 @@ class TwitterBot:
                                          access_token_secret=TWITTER_ACCESS_TOKEN_SECRET,
                                          wait_on_rate_limit=True)
 
-        self.airtable = Airtable(AIRTABLE_BASE_KEY, AIRTABLE_TABLE_NAME, AIRTABLE_API_KEY)
+        self.airtable = Airtable(AIRTABLE_ACCESS_TOKEN)
         self.twitter_me_id = self.get_me_id()
         self.tweet_response_limit = 35 # How many tweets to respond to each time the program wakes up
 
@@ -189,3 +192,6 @@ if __name__ == "__main__":
     while True:
         schedule.run_pending()
         time.sleep(1)
+
+       
+    
