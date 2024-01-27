@@ -22,7 +22,7 @@ Clone the Repository: Clone this repository to your local machine.
 
 Copy code
 
-```git clone https://github.com/AshankPatil98/SummonVivek---Twitter-Parody-Bot.git```
+```bash git clone https://github.com/AshankPatil98/SummonVivek---Twitter-Parody-Bot.git```
 
 
 Install Dependencies: Install the required Python libraries and dependencies.
