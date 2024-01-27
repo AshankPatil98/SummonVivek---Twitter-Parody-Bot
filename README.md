@@ -1,7 +1,6 @@
 # SummonVivek---Twitter-Parody-Bot
 Overview
-
-The SummonVivek Bot is a Twitter bot that humorously parodies Vivek Ramaswamy, a well-known public figure. This bot employs a custom Language Model (LLM) created using Jupyter Labs, leveraging the power of GPT-3.5 architecture from OpenAI. The project utilizes the Twitter API for interaction, Python for scripting, Airtable for data storage, and Railway.app for hosting.
+The VivekRamaParodyBot is a Twitter bot that humorously parodies Vivek Ramaswamy, a well-known public figure. This bot employs a custom Language Model (LLM) created using Jupyter Labs, leveraging the power of GPT-3.5 architecture from OpenAI. The project utilizes the Twitter API for interaction, Python for scripting, Airtable for data storage, and Railway.app for hosting.
 
 Features
 
@@ -16,19 +15,20 @@ Airtable Integration: Airtable is used as a data store for managing tweet histor
 Hosted on Railway.app: The bot is hosted on Railway.app, a platform that simplifies deployment and management of web applications. Railway.app ensures the bot is running reliably and consistently.
 
 Setup
-
-To run the SummonVivek Bot, follow these steps:
+To run the VivekRamaParodyBot, follow these steps:
 
 Clone the Repository: Clone this repository to your local machine.
 
-bash
+
 Copy code
-git clone https://github.com/your-username/VivekRamaParodyBot.git
+
+'''git clone https://github.com/AshankPatil98/SummonVivek---Twitter-Parody-Bot.git'''
+
 Install Dependencies: Install the required Python libraries and dependencies.
 
-bash
 Copy code
-pip install -r requirements.txt
+
+'''pip install -r requirements.txt'''
 
 Twitter API Keys: Obtain Twitter API keys from the Twitter Developer Portal. Update the config.py file with your API keys.
 
@@ -38,9 +38,10 @@ Railway.app Deployment: Sign up on Railway.app and deploy the bot following thei
 
 Run the Bot: Start the bot by running the main script.
 
-bash
 Copy code
-python main.py
+
+'''summonvivek.py'''
+
 Usage
 Once the bot is up and running, it will automatically post parody tweets, respond to mentions, and engage with the Twitter community in a humorous manner.
 
@@ -49,3 +50,5 @@ Feel free to customize the language model, tweet templates, and other settings a
 Disclaimer
 
 This bot is created for entertainment purposes only. Be mindful of Twitter's policies and guidelines when deploying and using this bot to ensure a positive online experience for everyone.
+
+Happy parodying!
