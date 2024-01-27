@@ -22,13 +22,13 @@ Clone the Repository: Clone this repository to your local machine.
 
 Copy code
 
-```git clone https://github.com/AshankPatil98/SummonVivek---Twitter-Parody-Bot.git```
+``` git clone https://github.com/AshankPatil98/SummonVivek---Twitter-Parody-Bot.git```
 
 Install Dependencies: Install the required Python libraries and dependencies.
 
 Copy code
 
-```pip install -r requirements.txt```
+``` pip install -r requirements.txt```
 
 Twitter API Keys: Obtain Twitter API keys from the Twitter Developer Portal. Update the config.py file with your API keys.
 
@@ -40,7 +40,7 @@ Run the Bot: Start the bot by running the main script.
 
 Copy code
 
-```summonvivek.py```
+``` summonvivek.py```
 
 Usage
 Once the bot is up and running, it will automatically post parody tweets, respond to mentions, and engage with the Twitter community in a humorous manner.
